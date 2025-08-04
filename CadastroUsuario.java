@@ -32,13 +32,10 @@ public class CadastroUsuario {
 
         botaoLimpar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e ) {
-                if (!campoNome.getText().isEmpty()  && !campoEmail.getText().isEmpty()  && !campoIdade.getText().isEmpty()) {
-                    campoNome = null;
-                    campoEmail.getText().equals(null);
-                    campoIdade.getText().equals(null);
-                } else {
-                    JOptionPane.showMessageDialog(frame, "É preciso de um cadastro realizado para limpá-lo.");
-                }
+                campoNome.setText("");
+                campoEmail.setText("");
+                campoIdade.setText("");
+
             }
         });
 
@@ -54,3 +51,4 @@ public class CadastroUsuario {
         frame.setVisible(true);
     }
 }
+
